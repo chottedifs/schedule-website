@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+    --grey-color-initial: #e6e6e6;
+    --dark-light-initial: #151716;
+    --orange-initial: #f9c66a;
+}
+
+.lead-paragraph {
+    font-size: 14px;
+    text-align: justify;
+}
+
+.lead-bold {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.lead-regular {
+    font-size: 17px;
+}
+
+.lead-footer {
+    font-size: 15px;
+}
+
+.lead-copy {
+    font-size: 14px;
+    color: #fff;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f2efef;
+}
+
+.navbar {
+    background-color: #f2efef;
+}
+
+.navbar .dropdown-menu {
+    background-color: #f2efef;
+    border: none;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #e6e6e6;
+}
+
+#greetings {
+    background-color: #e6e6e6;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#stories {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+#visi {
+    background-color: #e6e6e6;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#visi .card {
+    border: none;
+    border-radius: 40px;
+    font-size: 14px;
+    height: 350px;
+    background-color: var(--orange-initial);
+}
+
+#teacher {
+    background-color: #e6e6e6;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#teacher .card {
+    background-color: #e6e6e6;
+    border: none;
+    border-radius: 40px;
+    font-size: 14px;
+    // height: 350px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+#galleries {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+footer {
+    padding-top: 40px;
+    color: #fff;
+    background-color: var(--dark-light-initial);
+}
+
+footer .social-media {
+    font-size: 12px;
+    list-style: none;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .social-media li {
+    margin-top: 20px;
+}
+
+footer .location {
+    font-size: 12px;
+    list-style: none;
+}
+
+.img-footer {
+    align-items: center;
+    display: flex;
+}
+
+/* custom owl carousel */
+.owl-nav {
+    position: absolute;
+    top: 100px;
+}
+
+.owl-nav .owl-prev {
+    height: 40px;
+    width: 40px;
+    border-radius: 100px !important;
+    background-color: #fff !important;
+    margin-left: -10px !important;
+    margin-right: 1050px !important;
+}
+
+.owl-nav .owl-next {
+    height: 40px;
+    width: 40px;
+    right: -40px !important;
+    border-radius: 100px !important;
+    background-color: #fff !important;
+    justify-content: flex-end;
+    margin-right: -1060px !important;
+}
+
+/* end custom owl carousel */
