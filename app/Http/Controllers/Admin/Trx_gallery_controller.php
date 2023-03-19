@@ -85,6 +85,12 @@ class Trx_gallery_controller extends Controller
 
     public function destroy($id)
     {
-        //
+        $gallery = trx_gallery::findOrFail($id);
+
+        Storage::disk('public')->delete($gallery->image);
+
+        $gallery->destroy($id);
+
+        return redirect(route('admin.gallery.index'));
     }
 }

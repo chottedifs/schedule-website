@@ -86,6 +86,12 @@ class Trx_schedule_controller extends Controller
 
     public function destroy($id)
     {
-        //
+        $schedule = trx_schedule::findOrFail($id);
+
+        Storage::disk('public')->delete($schedule->schedule);
+
+        $schedule->destroy($id);
+
+        return redirect(route('admin.jadwal.index'));
     }
 }

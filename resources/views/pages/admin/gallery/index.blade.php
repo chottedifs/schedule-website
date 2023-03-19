@@ -16,10 +16,10 @@
                                     <tr>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Nama Aktifitas</th>
-                                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        <th class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7">
                                             Gambar</th>
                                         <th
-                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            class="text-uppercase text-center  text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                             Status</th>
                                         <th></th>
                                     </tr>
@@ -39,19 +39,30 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>
+                                            <td class="text-center text-sm">
                                                 <img src="{{ Storage::url($namaGaleri->image) }}" width="150"
-                                                    height="100" alt="gallery">
+                                                    height="100" alt="gallery" >
                                             </td>
-                                            <td class="align-middle text-sm">
+                                            <td class="text-center text-sm">
                                                 <span class="badge badge-sm bg-gradient-success">Terdokumentasikan</span>
                                             </td>
-                                            <td class="align-middle">
-                                                <a href="{{ route('admin.gallery.edit', $namaGaleri->id) }}"
-                                                    class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                                                    data-original-title="Edit user">
-                                                    Edit
-                                                </a>
+                                            <td class="align-middle ">
+                                                <div class="d-flex justify-content-end">
+                                                    <a href="{{ route('admin.gallery.edit', $namaGaleri->id) }}"
+                                                        class="btn me-3 text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                                                        data-original-title="Edit user">
+                                                        Edit
+                                                    </a>
+                                                    <form action="{{ route('admin.gallery.destroy', $namaGaleri->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"
+                                                            class="btn text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                                                            data-original-title="Edit user">
+                                                            Delete
+                                                        </button>
+                                                    </form>
+                                                </div>
                                             </td>
                                         </tr>
                                     @endforeach

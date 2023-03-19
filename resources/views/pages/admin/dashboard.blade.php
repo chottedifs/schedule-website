@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid py-4">
+     <div class="container-fluid py-4">
         <div class="row">
             <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                 <div class="card">
@@ -9,16 +9,16 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Money</p>
+                                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Siswa/I</p>
                                     <h5 class="font-weight-bolder mb-0">
-                                        $53,000
-                                        <span class="text-success text-sm font-weight-bolder">+55%</span>
+                                        58 Siswa/I
+                                        <span class="text-success text-sm font-weight-bolder"></span>
                                     </h5>
                                 </div>
                             </div>
                             <div class="col-4 text-end">
                                 <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                    <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+                                    <i class="bi bi-people-fill"></i>
                                 </div>
                             </div>
                         </div>
@@ -31,23 +31,23 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Users</p>
+                                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Jumlah Guru</p>
                                     <h5 class="font-weight-bolder mb-0">
-                                        2,300
-                                        <span class="text-success text-sm font-weight-bolder">+3%</span>
+                                        16 Guru
+                                        <span class="text-success text-sm font-weight-bolder"></span>
                                     </h5>
                                 </div>
                             </div>
                             <div class="col-4 text-end">
                                 <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+                                    <i class="bi bi-people-fill"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+            {{--<div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                 <div class="card">
                     <div class="card-body p-3">
                         <div class="row">
@@ -67,8 +67,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>--}}
+            {{--</div>
             <div class="col-xl-3 col-sm-6">
                 <div class="card">
                     <div class="card-body p-3">
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--}}
             </div>
         </div>
     </div>

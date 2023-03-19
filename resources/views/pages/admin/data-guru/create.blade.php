@@ -83,7 +83,7 @@
                         </div>
                         <div class="mb-3">
                             <input type="email" class="form-control  @error('email') is-invalid @enderror"
-                                placeholder="Kelas Ajar" aria-label="Name" aria-describedby="email-addon" name="email"
+                                placeholder="Email" aria-label="Name" aria-describedby="email-addon" name="email"
                                 id="email" value="{{ old('email') }}">
                             @error('email')
                                 <div class="invalid-feedback">

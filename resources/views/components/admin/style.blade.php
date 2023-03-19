@@ -8,3 +8,5 @@
 <link href="{{ asset('template/backend/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
 <!-- CSS Files -->
 <link id="pagestyle" href="{{ asset('template/backend/assets/css/soft-ui-dashboard.css?v=1.0.6') }}" rel="stylesheet" />
+{{-- Bootstrap Icons --}}
+<link rel="stylesheet" href="{{ asset('template/backend/assets/bootstrap-icons/bootstrap-icons.css') }}">

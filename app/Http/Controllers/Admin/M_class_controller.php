@@ -74,6 +74,10 @@ class M_class_controller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $className = m_class::findOrFail($id);
+
+        $className->destroy($id);
+
+        return redirect(route('admin.master-kelas.index'));
     }
 }

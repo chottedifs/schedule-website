@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\M_activity_controller;
 use App\Http\Controllers\Admin\Trx_gallery_controller;
 use App\Http\Controllers\Admin\Trx_teacher_controller;
 use App\Http\Controllers\Admin\Trx_schedule_controller;
+use App\Http\Controllers\Admin\Trx_user_controller;
+use App\Http\Controllers\Admin\M_organisasi_controller;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\VocationalProfileController;
 use App\Http\Controllers\ScheduleController;
@@ -31,6 +33,7 @@ use App\Http\Controllers\ScheduleController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('visi-dan-misi', [VocationalProfileController::class, 'visi'])->name('visi');
+Route::get('struktur-organisasi', [VocationalProfileController::class, 'organisasi'])->name('organisasi');
 Route::get('galeri', [VocationalProfileController::class, 'gallery'])->name('galeri');
 Route::get('jadwal-kelas-10', [ScheduleController::class, 'classXSchedule'])->name('jadwal-kelas-10');
 Route::get('jadwal-kelas-11', [ScheduleController::class, 'classXiSchedule'])->name('jadwal-kelas-11');
@@ -45,7 +48,11 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::resource('/master-aktifitas', M_activity_controller::class)->except('show');
     Route::resource('/gallery', Trx_gallery_controller::class)->except('show');
     Route::resource('/data-guru', Trx_teacher_controller::class)->except('show');
+    Route::get('/data-guru/cetak', [Trx_teacher_controller::class, 'printPDF'])->name('print-teacher');
+    Route::post('/data-guru/kelas', [Trx_teacher_controller::class, 'search'])->name('search-teacher');
     Route::resource('/jadwal', Trx_schedule_controller::class)->except('show');
+    Route::resource('/user', Trx_user_controller::class)->except('show');
+    Route::resource('/organisasi', M_organisasi_controller::class)->except('show');
 });
 
 require __DIR__.'/auth.php';

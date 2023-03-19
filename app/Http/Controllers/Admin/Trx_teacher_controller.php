@@ -7,15 +7,18 @@ use Illuminate\Http\Request;
 use App\Models\Trx_teacher;
 use App\Models\m_class;
 use Storage;
+use PDF;
 
 class Trx_teacher_controller extends Controller
 {
     public function index()
     {
-        $teacherData = trx_teacher::all();
+        $class = m_class::all();
+        $teacherData = trx_teacher::where('m_class_id', 1)->get();
 
         return view('pages.admin.data-guru.index', [
-            'guru' => $teacherData
+            'guru' => $teacherData,
+            'kelas' => $class
         ]);
     }
 
@@ -114,6 +117,31 @@ class Trx_teacher_controller extends Controller
 
     public function destroy($id)
     {
-        //
+        $teacherData = trx_teacher::findOrFail($id);
+
+        Storage::disk('public')->delete($teacherData->image);
+
+        $teacherData->destroy($id);
+
+        return redirect(route('admin.data-guru.index'));
+    }
+
+    public function search (Request $request) {
+        $class = m_class::all();
+        $search = $request->m_class_id;
+
+        $teacherData = trx_teacher::where('m_class_id', $search)->get();
+
+        return view('pages.admin.data-guru.index', [
+            'guru' => $teacherData,
+            'kelas' => $class
+        ]);
+    }
+
+    public function printPDF() {
+        // ddd($request->m_class_id);
+        $teacherData = trx_teacher::all();
+        $pdf = PDF::loadview('pages.admin.data-guru.teacher-data', ['teacher'=>$teacherData])->setPaper('a4', 'landscape');
+        return $pdf->download('data-guru.pdf');
     }
 }

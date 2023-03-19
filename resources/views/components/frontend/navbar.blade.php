@@ -1,5 +1,5 @@
 <!-- Navigation bar -->
-<nav class="navbar navbar-expand-lg fixed-top mb-10">
+<nav class="navbar navbar-expand-lg fixed-top mb-12">
     <div class="container">
         <a class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('template/frontend/assets/images/logo-smk-yappika-serpong.png') }}"
@@ -26,12 +26,21 @@
                         <li>
                             <a class="dropdown-item" href="{{ route('visi') }}">Visi dan Misi <img
                                     src="{{ asset('template/frontend/assets/images/icons/ico-arrow.png') }}"
-                                    style="float: right;" class="ms-4"></a>
+                                    style="float: right;" class="ms-4"
+                                    ></a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ route('organisasi') }}"> Struktur
+                                organisasi<img
+                                    src="{{ asset('template/frontend/assets/images/icons/ico-arrow.png') }}"
+                                    style="float: right;" class="ms-4"
+                                    ></a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="{{ route('galeri') }}">Gallery Foto <img
                                     src="{{ asset('template/frontend/assets/images/icons/ico-arrow.png') }}"
-                                    style="float: right;" class="ms-4"></a>
+                                    style="float: right;" class="ms-4"
+                                    ></a>
                         </li>
                     </ul>
                 </li>
@@ -54,6 +63,7 @@
                         <li><a class="dropdown-item" href="{{ route('jadwal-praktek') }}">Jadwal Praktek <img
                                     src="{{ asset('template/frontend/assets/images/icons/ico-arrow.png') }}"
                                     style="float: right;" class="ms-5"></a></li>
+
                     </ul>
                 </li>
             </ul>

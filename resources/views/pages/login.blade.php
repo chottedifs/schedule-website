@@ -63,13 +63,19 @@
                                 <div class="card-body">
                                     <form role="form" action="{{ route('login') }}" method="POST">
                                         @csrf
-                                        <label>Email</label>
+                                        <label></label>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                          </svg> <label>Email</label>
                                         <div class="mb-3">
-                                            <input type="email" class="form-control" placeholder="Email"
+                                            <input type="email" class="form-control" class="bi bi-envelope-fill" placeholder="Email"
                                                 aria-label="Email" aria-describedby="email-addon" name="email"
                                                 id="email" value={{ old('email') }}>
                                         </div>
-                                        <label>Password</label>
+                                        <label></label>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                                            <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                          </svg> <label>Password</label>
                                         <div class="mb-3">
                                             <input type="password" class="form-control" placeholder="Password"
                                                 aria-label="Password" aria-describedby="password-addon" name="password"
@@ -86,7 +92,7 @@
                         <div class="col-md-6">
                             <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
                                 <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6"
-                                    style="background-image:url('{{ asset('template/backend/assets/img/curved-images/curved6.jpg') }}')">
+                                    style="background-image:url('{{ asset('template/backend/assets/img/curved-images/gedung-yappika.png') }}')">
                                 </div>
                             </div>
                         </div>

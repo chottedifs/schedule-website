@@ -16,7 +16,7 @@
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Nama Kelas</th>
                                         <th
-                                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                            class="text-uppercase text-center text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                                             Status</th>
                                         <th></th>
                                     </tr>
@@ -35,15 +35,26 @@
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td class="align-middle text-sm">
+                                            <td class="align-middle text-center text-sm">
                                                 <span class="badge badge-sm bg-gradient-success">Online</span>
                                             </td>
                                             <td class="align-middle">
-                                                <a href="{{ route('admin.master-kelas.edit', $namaKelas->id) }}"
-                                                    class="text-secondary font-weight-bold text-xs" data-toggle="tooltip"
-                                                    data-original-title="Edit user">
-                                                    Edit
-                                                </a>
+                                                <div class="d-flex justify-content-end">
+                                                    <a href="{{ route('admin.master-kelas.edit', $namaKelas->id) }}"
+                                                        class="btn me-3 text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                                                        data-original-title="Edit user">
+                                                        Edit
+                                                    </a>
+                                                    <form action="{{ route('admin.master-kelas.destroy', $namaKelas->id) }}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"
+                                                            class="btn text-secondary font-weight-bold text-xs" data-toggle="tooltip"
+                                                            data-original-title="Edit user">
+                                                            Delete
+                                                        </button>
+                                                    </form>
+                                                </div>
                                             </td>
                                         </tr>
                                     @endforeach

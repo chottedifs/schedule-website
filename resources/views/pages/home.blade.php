@@ -7,27 +7,27 @@
             <div class="row mt-4">
                 <div class="owl-carousel owl-theme">
                     <div class="item">
-                        <img src="{{ asset('template/frontend/assets/images/home/home-img-1.png') }}"
+                        <img src="{{ asset('template/frontend/assets/images/home/Slide-Foto-1.png') }}"
                             alt="pkk-smk-yappika-serpong" />
                     </div>
                     <div class="item">
-                        <img src="{{ asset('template/frontend/assets/images/home/home-img-1.png') }}"
+                        <img src="{{ asset('template/frontend/assets/images/home/Slide-Foto-2.png') }}"
                             alt="pkk-smk-yappika-serpong" />
                     </div>
                     <div class="item">
-                        <img src="{{ asset('template/frontend/assets/images/home/home-img-3.png') }}"
+                        <img src="{{ asset('template/frontend/assets/images/home/Slide-Foto-3.png') }}"
                             alt="pkk-smk-yappika-serpong" />
                     </div>
                     <div class="item">
-                        <img src="{{ asset('template/frontend/assets/images/home/home-img-4.png') }}"
+                        <img src="{{ asset('template/frontend/assets/images/home/Slide-Foto-4.png') }}"
                             alt="pkk-smk-yappika-serpong" />
                     </div>
                     <div class="item">
-                        <img src="{{ asset('template/frontend/assets/images/home/home-img-5.png') }}"
+                        <img src="{{ asset('template/frontend/assets/images/home/Slide-Foto-5.png') }}"
                             alt="pkk-smk-yappika-serpong" />
                     </div>
                     <div class="item">
-                        <img src="{{ asset('template/frontend/assets/images/home/home-img-6.png') }}"
+                        <img src="{{ asset('template/frontend/assets/images/home/Slide-Foto-6.png') }}"
                             alt="pkk-smk-yappika-serpong" />
                     </div>
                 </div>
@@ -85,7 +85,9 @@
             $(".owl-carousel").owlCarousel({
                 loop: true,
                 margin: 10,
-                nav: true,
+                autoplay: true,
+                autoplayTimeout: 4500,
+                autoplayhoverpause: true,
                 responsive: {
                     0: {
                         items: 1,

@@ -45,8 +45,8 @@
                         <div class="mb-3">
                             <input type="text" class="form-control  @error('study_program') is-invalid @enderror"
                                 placeholder="Program Studi" aria-label="Name" aria-describedby="email-addon"
-                                name="study_program" id="study_program"
-                                value="{{ old('study_program', $guru->study_program) }}">
+                                name="study_program"
+                                id="study_program" value="{{ old('study_program', $guru->study_program) }}">
                             @error('study_program')
                                 <div class="invalid-feedback">
                                     {{ $message }}

@@ -66,14 +66,12 @@ class M_activity_controller extends Controller
         return redirect(route('admin.master-aktifitas.index'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $activityName = m_activity::findOrFail($id);
+
+        $activityName->destroy($id);
+
+        return redirect(route('admin.master-aktifitas.index'));
     }
 }

@@ -1,13 +1,15 @@
 @extends('layouts.guest')
 
 @section('content')
-    <!-- galleries -->
-    <section id="galleries">
-        <div class="container">
+<!-- galleries -->
+<section id="galleries">
+    <div class="container">
+            @if ($aktifitas)
             @foreach ($aktifitas as $dataAktifitas)
                 <div class="row mt-4">
                     <p class="lead-bold mb-5">{{ $dataAktifitas->activity_name }}</p>
                     <div class="owl-carousel owl-theme">
+                        @if ($galeri)
                         @foreach ($galeri as $dataGaleri)
                             @if ($dataGaleri->m_activity_id === $dataAktifitas->id)
                                 <div class="item">
@@ -15,13 +17,15 @@
                                 </div>
                             @endif
                         @endforeach
+                        @endif
                     </div>
                 </div>
             @endforeach
+            @endif
         </div>
     </section>
     <!-- end galleries -->
-@endsection
+    @endsection
 
 @push('script')
     <script>
